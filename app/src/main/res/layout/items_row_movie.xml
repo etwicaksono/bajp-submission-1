@@ -10,21 +10,50 @@
 
     <ImageView
         android:id="@+id/img_movie"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
+        android:layout_width="100dp"
+        android:layout_height="150dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        tools:src="@tools:sample/backgrounds/scenic" />
+        tools:ignore="ContentDescription"
+        tools:src="@drawable/poster_a_star_is_born" />
 
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
+        android:ellipsize="end"
+        android:maxLines="1"
         android:textSize="24sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@id/img_movie"
         app:layout_constraintTop_toTopOf="parent"
-        tools:text="Movie Title" />
+        tools:text="A Star is Born" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:textSize="12sp"
+        android:id="@+id/tv_release_date"
+        app:layout_constraintStart_toEndOf="@+id/img_movie"
+        app:layout_constraintTop_toBottomOf="@id/tv_title"
+        tools:text="December 15, 2021" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_description"
+        android:layout_marginStart="16dp"
+        tools:text="@tools:sample/lorem/random"
+        android:maxLines="4"
+        android:ellipsize="end"
+        app:layout_constraintStart_toEndOf="@id/img_movie"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:justificationMode="inter_word"
+        app:layout_constraintBottom_toBottomOf="parent"/>
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
