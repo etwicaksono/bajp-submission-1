@@ -12,10 +12,10 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.ListViewHolder>() {
         fun bind(movie: MovieEntity) {
             with(binding) {
                 imgMovie.setImageResource(
-                    binding.root.resources.getIdentifier(
+                    root.resources.getIdentifier(
                         movie.poster,
                         "drawable",
-                        binding.root.context.packageName
+                        root.context.packageName
                     )
                 )
                 tvTitle.text = movie.title
