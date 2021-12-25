@@ -39,4 +39,10 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.ListViewHolder>() {
     }
 
     override fun getItemCount(): Int =listMovies.size
+
+    fun setMovies(movies:List<MovieEntity>?){
+        if(movies==null) return
+        this.listMovies.clear()
+        this.listMovies.addAll(movies)
+    }
 }
