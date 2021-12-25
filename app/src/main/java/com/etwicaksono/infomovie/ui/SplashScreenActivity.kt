@@ -1,10 +1,11 @@
-package com.etwicaksono.infomovie
+package com.etwicaksono.infomovie.ui
 
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
+import com.etwicaksono.infomovie.R
 
 class SplashScreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

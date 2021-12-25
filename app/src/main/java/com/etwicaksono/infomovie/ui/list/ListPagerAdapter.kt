@@ -1,12 +1,13 @@
-package com.etwicaksono.infomovie
+package com.etwicaksono.infomovie.ui.list
 
 import android.content.Context
 import androidx.annotation.StringRes
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
+import com.etwicaksono.infomovie.R
 
-class SectionPagerAdapter(private val mContext: Context, fm: FragmentManager) :
+class ListPagerAdapter(private val mContext: Context, fm: FragmentManager) :
     FragmentPagerAdapter(fm, BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
     override fun getCount(): Int = 2
 

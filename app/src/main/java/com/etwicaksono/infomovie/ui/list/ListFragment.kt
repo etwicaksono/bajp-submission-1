@@ -1,4 +1,4 @@
-package com.etwicaksono.infomovie
+package com.etwicaksono.infomovie.ui.list
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

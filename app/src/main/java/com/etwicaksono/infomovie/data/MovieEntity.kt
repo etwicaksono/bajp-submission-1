@@ -1,4 +1,4 @@
-package com.etwicaksono.infomovie
+package com.etwicaksono.infomovie.data
 
 
 import android.os.Parcelable
