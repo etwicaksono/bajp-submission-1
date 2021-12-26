@@ -20,11 +20,12 @@
 
     <TextView
         android:id="@+id/tv_title"
+        android:theme="@style/TitleText"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:ellipsize="end"
-        android:maxLines="1"
+        android:maxLines="2"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toEndOf="@id/img_movie"
@@ -47,9 +48,11 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
         android:ellipsize="end"
+        android:theme="@style/PlotText"
         android:justificationMode="inter_word"
         android:maxLines="4"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_release_date"
+        android:layout_marginTop="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/img_movie"
         tools:text="@tools:sample/lorem/random" />

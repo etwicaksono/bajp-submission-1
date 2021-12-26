@@ -20,4 +20,13 @@
         <item name="background">@color/blue_900</item>
     </style>
 
+    <!--    Item row movie-->
+    <style name="TitleText" parent="Theme.InfoMovie">
+        <item name="android:textColor">@color/blue_900</item>
+    </style>
+
+    <style name="PlotText" parent="Theme.InfoMovie">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
 </resources>
