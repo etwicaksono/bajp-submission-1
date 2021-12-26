@@ -1,5 +1,6 @@
 [{
         "id": 1,
+    "type": "movies",
         "title": "ALITA: BATTLE ANGEL",
         "year": "2019",
         "release_date": "January 31, 2019",
@@ -12,6 +13,7 @@
     },
     {
         "id": 2,
+        "type": "movies",
         "title": "AQUAMAN",
         "year": "2018",
         "release_date": "July 6, 2018",
@@ -24,6 +26,7 @@
     },
     {
         "id": 3,
+        "type": "movies",
         "title": "A STAR IS BORN",
         "year": "2018",
         "release_date": "October 3, 2018",
@@ -36,6 +39,7 @@
     },
     {
         "id": 4,
+        "type": "movies",
         "title": "BOHEMIAN RHAPSODY",
         "year": "2018",
         "release_date": "October 24, 2018",
@@ -48,6 +52,7 @@
     },
     {
         "id": 5,
+        "type": "movies",
         "title": "COLD PURSUIT",
         "year": "2019",
         "release_date": "February 7, 2019",
@@ -60,6 +65,7 @@
     },
     {
         "id": 6,
+        "type": "movies",
         "title": "CREED II",
         "year": "2018",
         "release_date": "November 21, 2018",
@@ -72,6 +78,7 @@
     },
     {
         "id": 7,
+        "type": "movies",
         "title": "FANTASTIC BEAST: THE CRIMES OF GRINDELWALD",
         "year": "2018",
         "release_date": "November 16, 2018",
@@ -84,6 +91,7 @@
     },
     {
         "id": 8,
+        "type": "movies",
         "title": "GLASS",
         "year": "2019",
         "release_date": "January 18, 2019",
@@ -96,6 +104,7 @@
     },
     {
         "id": 9,
+        "type": "movies",
         "title": "HOW TO TRAIN YOUR DRAGON",
         "year": "2010",
         "release_date": "March 26, 2010",
@@ -108,6 +117,7 @@
     },
     {
         "id": 10,
+        "type": "movies",
         "title": "AVENGERS: INFINITY WAR",
         "year": "2018",
         "release_date": "April 27, 2018",
@@ -120,6 +130,7 @@
     },
     {
         "id": 11,
+        "type": "movies",
         "title": "MARRY QUEEN",
         "year": "2018",
         "release_date": "December 21, 2018",
@@ -132,6 +143,7 @@
     },
     {
         "id": 12,
+        "type": "movies",
         "title": "MASTER Z: IP MAN LEGACY",
         "year": "2018",
         "release_date": "December 26, 2018",
@@ -144,6 +156,7 @@
     },
     {
         "id": 13,
+        "type": "movies",
         "title": "MORTAL ENGINES",
         "year": "2018",
         "release_date": "December 14, 2018",

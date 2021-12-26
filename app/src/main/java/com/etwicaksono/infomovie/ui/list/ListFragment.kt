@@ -1,16 +1,18 @@
 package com.etwicaksono.infomovie.ui.list
 
 import android.content.Context
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.etwicaksono.infomovie.R
+import com.etwicaksono.infomovie.data.MovieEntity
 import com.etwicaksono.infomovie.databinding.FragmentListBinding
+import com.etwicaksono.infomovie.ui.detail.DetailActivity
 
 class ListFragment : Fragment() {
     private var _binding: FragmentListBinding? = null
@@ -38,19 +40,22 @@ class ListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         if (activity != null) {
-            val viewModel = ViewModelProvider(
+            viewModel = ViewModelProvider(
                 this,
                 ViewModelProvider.NewInstanceFactory()
             )[ListViewModel::class.java]
 
-            val listAdapter = ListAdapter()
+            listAdapter = ListAdapter {
+                showSelectedData(it)
+            }
 
             when (type) {
                 resources.getString(R.string.movies) ->
-                    listAdapter.setMovies(viewModel.getAllMovies(requireContext()))
+                    viewModel.getAllMovies(requireContext())
                 resources.getString(R.string.tv_shows) ->
-                    listAdapter.setMovies(viewModel.getAllTvShows(requireContext()))
+                    viewModel.getAllTvShows(requireContext())
             }
+            listAdapter.setMovies(viewModel.movie)
 
             binding?.rvAcademy?.apply {
                 layoutManager = LinearLayoutManager(context)
@@ -59,6 +64,13 @@ class ListFragment : Fragment() {
             }
 
         }
+    }
+
+    private fun showSelectedData(movie: MovieEntity) {
+        startActivity(Intent(requireContext(), DetailActivity::class.java).apply {
+            putExtra(DetailActivity.EXTRA_ID, movie.id)
+            putExtra(DetailActivity.EXTRA_TYPE, movie.type)
+        })
     }
 
     override fun onDestroy() {

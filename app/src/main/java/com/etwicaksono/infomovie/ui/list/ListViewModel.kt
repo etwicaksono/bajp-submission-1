@@ -3,37 +3,27 @@ package com.etwicaksono.infomovie.ui.list
 import android.content.Context
 import androidx.lifecycle.ViewModel
 import com.etwicaksono.infomovie.data.MovieEntity
+import com.etwicaksono.infomovie.utils.getJsonDataFromAsset
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 import java.io.IOException
 
-class ListViewModel:ViewModel() {
+class ListViewModel : ViewModel() {
 
-    fun getAllMovies(context: Context):List<MovieEntity>{
-        val jsonMovies = getJsonDataFromAsset(context,"movies.json")
+    lateinit var movie: List<MovieEntity>
+
+    fun getAllMovies(context: Context) {
+        val jsonMovies = getJsonDataFromAsset(context, "movies.json")
         val gson = Gson()
-        val listMoviesType = object:TypeToken<List<MovieEntity>>(){}.type
-        return gson.fromJson(jsonMovies,listMoviesType)
+        val listMoviesType = object : TypeToken<List<MovieEntity>>() {}.type
+        movie = gson.fromJson(jsonMovies, listMoviesType)
     }
 
-    fun getAllTvShows(context: Context):List<MovieEntity>{
-        val jsonMovies = getJsonDataFromAsset(context,"tvshows.json")
+    fun getAllTvShows(context: Context) {
+        val jsonMovies = getJsonDataFromAsset(context, "tvshows.json")
         val gson = Gson()
-        val listMoviesType = object:TypeToken<List<MovieEntity>>(){}.type
-        return gson.fromJson(jsonMovies,listMoviesType)
-    }
-
-    private fun getJsonDataFromAsset(context: Context, fileName: String): String? {
-        val jsonString:String
-        try {
-            jsonString=context.assets.open(fileName).bufferedReader().use{
-                it.readText()
-            }
-        }catch (ioException:IOException){
-            ioException.printStackTrace()
-            return null
-        }
-        return jsonString
+        val listMoviesType = object : TypeToken<List<MovieEntity>>() {}.type
+        movie = gson.fromJson(jsonMovies, listMoviesType)
     }
 
 

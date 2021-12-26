@@ -1,12 +1,14 @@
 package com.etwicaksono.infomovie.ui.list
 
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.etwicaksono.infomovie.data.MovieEntity
 import com.etwicaksono.infomovie.databinding.ItemsRowMovieBinding
 
-class ListAdapter : RecyclerView.Adapter<ListAdapter.ListViewHolder>() {
+class ListAdapter(private val onClick:(MovieEntity)->Unit) : RecyclerView.Adapter<ListAdapter.ListViewHolder>() {
     inner class ListViewHolder(private val binding: ItemsRowMovieBinding) :
         RecyclerView.ViewHolder(binding.root) {
         fun bind(movie: MovieEntity) {
@@ -21,6 +23,10 @@ class ListAdapter : RecyclerView.Adapter<ListAdapter.ListViewHolder>() {
                 tvTitle.text = movie.title
                 tvReleaseDate.text = movie.releaseDate
                 tvPlot.text = movie.plot
+
+                itemRowMovie.setOnClickListener {
+                    onClick(movie)
+                }
             }
         }
 

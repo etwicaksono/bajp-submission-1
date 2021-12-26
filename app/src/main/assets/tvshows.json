@@ -1,5 +1,6 @@
 [{
         "id": 1,
+    "type": "series",
         "title": "ARROW",
         "year": "2012",
         "release_date": "October 10, 2012",
@@ -12,6 +13,7 @@
     },
     {
         "id": 2,
+        "type": "series",
         "title": "DOOM PATROL",
         "year": "2019",
         "release_date": "February 15, 2019",
@@ -24,6 +26,7 @@
     },
     {
         "id": 3,
+        "type": "series",
         "title": "DRAGON BALL",
         "year": "1986",
         "release_date": "February 26, 1986",
@@ -36,6 +39,7 @@
     },
     {
         "id": 4,
+        "type": "series",
         "title": "FAIRYTAIL",
         "year": "2009",
         "release_date": "October 12, 2009",
@@ -48,6 +52,7 @@
     },
     {
         "id": 5,
+        "type": "series",
         "title": "FAMILY GUY",
         "year": "2010",
         "release_date": "May 23, 2010",
@@ -60,6 +65,7 @@
     },
     {
         "id": 6,
+        "type": "series",
         "title": "FLASH",
         "year": "2014",
         "release_date": "October 7, 2014",
@@ -72,6 +78,7 @@
     },
     {
         "id": 7,
+        "type": "series",
         "title": "GOT",
         "year": "2011",
         "release_date": "April 17, 2011",
@@ -84,6 +91,7 @@
     },
     {
         "id": 8,
+        "type": "series",
         "title": "GOTHAM",
         "year": "2014",
         "release_date": "September 22, 2014",
@@ -96,6 +104,7 @@
     },
     {
         "id": 9,
+        "type": "series",
         "title": "GREY'S ANATOMY",
         "year": "2005",
         "release_date": "March 27, 2005",
@@ -108,6 +117,7 @@
     },
     {
         "id": 10,
+        "type": "series",
         "title": "HANNA",
         "year": "2019",
         "release_date": "Marxh 28, 2019",
@@ -120,6 +130,7 @@
     },
     {
         "id": 11,
+        "type": "series",
         "title": "MARVEL'S IRON FIST",
         "year": "2017",
         "release_date": "March 17, 2017",
@@ -132,6 +143,7 @@
     },
     {
         "id": 12,
+        "type": "series",
         "title": "NARUTO SHIPUDDEN",
         "year": "2007",
         "release_date": "February 15, 2007",
@@ -144,6 +156,7 @@
     },
     {
         "id": 13,
+        "type": "series",
         "title": "NCIS",
         "year": "2003",
         "release_date": "September 23, 2003",

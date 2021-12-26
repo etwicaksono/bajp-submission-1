@@ -9,6 +9,8 @@ import kotlinx.parcelize.Parcelize
 data class MovieEntity(
     @SerializedName("id")
     val id: Int?,
+    @SerializedName("type")
+    val type: String?,
     @SerializedName("title")
     val title: String?,
     @SerializedName("year")
