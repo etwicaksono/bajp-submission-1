@@ -43,6 +43,10 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="CollapsibleToolbar" parent="Theme.InfoMovie">
+        <item name="android:background">@color/white</item>
+        <item name="android:textColor">@color/blue_900</item>
+    </style>
 
 
 </resources>

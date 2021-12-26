@@ -11,17 +11,37 @@ class DetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding= ActivityDetailBinding.inflate(layoutInflater)
+        binding = ActivityDetailBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
 
-        val id = intent.getIntExtra(EXTRA_ID,1)
+        val id = intent.getIntExtra(EXTRA_ID, 1)
         val type = intent.getStringExtra(EXTRA_TYPE)
 
-        val viewModel = ViewModelProvider(this,ViewModelProvider.NewInstanceFactory())[DetailViewModel::class.java]
-        viewModel.setSelectedMovie(type,id)
+        val viewModel = ViewModelProvider(
+            this,
+            ViewModelProvider.NewInstanceFactory()
+        )[DetailViewModel::class.java]
+        viewModel.setSelectedMovie(type, id)
         viewModel.getMovies(this)
         val movie = viewModel.movie
+
+        binding.apply {
+            tvTitle.text = movie.title
+            tvGenre.text = movie.genres
+            ivPoster.setImageResource(
+                root.resources.getIdentifier(
+                    movie.poster,
+                    "drawable",
+                    this@DetailActivity.packageName
+                )
+            )
+            tvReleaseDate.text=movie.releaseDate
+            tvRuntime.text=movie.runtime
+            tvPlot.text=movie.plot
+            tvDirector.text=movie.director
+            tvActors.text=movie.actors
+        }
     }
 
     companion object {
