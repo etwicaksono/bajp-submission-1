@@ -14,13 +14,15 @@ class DetailViewModel : ViewModel() {
     private lateinit var type: String
     lateinit var movie: MovieEntity
 
-    fun setSelectedMovie(type: String?, id: Int) {
+    fun setSelectedMovie(type: String?, id: Int?) {
         if (type != null) {
             this.type = type
         }else{
             this.type="movies"
         }
-        this.movieId = id
+        if (id != null) {
+            this.movieId = id
+        }
     }
 
     fun getMovie(context: Context) {
