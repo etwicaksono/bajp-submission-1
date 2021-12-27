@@ -22,7 +22,7 @@ class DetailViewModel : ViewModel() {
         this.movieId = id
     }
 
-    fun getMovies(context: Context) {
+    fun getMovie(context: Context) {
         val jsonMovies = getJsonDataFromAsset(context, if(type=="movies")"movies.json" else "tvshows.json")
         val gson = Gson()
         val listMoviesType = object : TypeToken<List<MovieEntity>>() {}.type

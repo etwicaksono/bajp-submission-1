@@ -26,7 +26,7 @@ class DetailActivity : AppCompatActivity() {
             ViewModelProvider.NewInstanceFactory()
         )[DetailViewModel::class.java]
         viewModel.setSelectedMovie(type, id)
-        viewModel.getMovies(this)
+        viewModel.getMovie(this)
         val movie = viewModel.movie
 
         binding.apply {
