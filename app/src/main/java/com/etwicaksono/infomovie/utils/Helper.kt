@@ -18,7 +18,9 @@ fun getJsonDataFromAsset(context: Context, fileName: String): String? {
 }
 
 fun getRuntime(input: Int): String {
-    val hour = floor((input.toDouble() / 60)).toInt().toString()
+    val hour = floor((input.toDouble() / 60)).toInt()
     val minutes = (input % 60).toString()
-    return  "${hour}h ${minutes}m"
+    return if (hour > 0) {
+        "${hour}h ${minutes}m"
+    } else "${minutes}m"
 }
