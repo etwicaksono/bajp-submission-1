@@ -3,6 +3,7 @@
     <string name="movies">MOVIES</string>
     <string name="tv_shows">TV SHOWS</string>
     <string name="detail_movie">DETAIL MOVIE</string>
+    <string name="detail_tv_show">DETAIL TV SHOW</string>
     <string name="overview">Overview</string>
     <string name="director">Director</string>
     <string name="actors">Actors</string>

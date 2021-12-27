@@ -53,5 +53,9 @@
         <item name="android:textColor">@color/blue_900</item>
     </style>
 
+    <style name="FloatingButton" parent="Theme.InfoMovie">
+        <item name="android:backgroundTint">@color/white</item>
+    </style>
+
 
 </resources>

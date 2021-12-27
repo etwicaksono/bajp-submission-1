@@ -2,7 +2,9 @@ package com.etwicaksono.infomovie.ui.detail
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.core.app.ShareCompat
 import androidx.lifecycle.ViewModelProvider
+import com.etwicaksono.infomovie.R
 import com.etwicaksono.infomovie.databinding.ActivityDetailBinding
 import com.etwicaksono.infomovie.utils.getRuntime
 
@@ -42,6 +44,24 @@ class DetailActivity : AppCompatActivity() {
             tvPlot.text=movie.plot
             tvDirector.text=movie.director
             tvActors.text=movie.actors
+            tvHeader.text=if(movie.type=="movies")getString(R.string.detail_movie) else getString(R.string.detail_tv_show)
+
+            fab.setOnClickListener {
+                val selected = if(movie.type=="movies")"movie" else "tv show"
+                val mimeType="text/plain"
+                ShareCompat.IntentBuilder
+                    .from(this@DetailActivity)
+                    .setType(mimeType)
+                    .setChooserTitle("Bagikan $selected ini sekarang!")
+                    .setText("""
+                        Ada $selected seru loh, yuk nonton sekarang! Nih aku kasih infonya.
+                        Movie : ${movie.title}
+                        Genre : ${movie.genres}
+                        Tahun : ${movie.year}
+                        Sinopsis : ${movie.plot}
+                    """.trimIndent())
+                    .startChooser()
+            }
         }
     }
 
