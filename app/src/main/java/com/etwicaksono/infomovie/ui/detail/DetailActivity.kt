@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
 import com.etwicaksono.infomovie.databinding.ActivityDetailBinding
+import com.etwicaksono.infomovie.utils.getRuntime
 
 class DetailActivity : AppCompatActivity() {
 
@@ -37,7 +38,7 @@ class DetailActivity : AppCompatActivity() {
                 )
             )
             tvReleaseDate.text=movie.releaseDate
-            tvRuntime.text=movie.runtime
+            tvRuntime.text= movie.runtime?.let { getRuntime(it.toInt()) }
             tvPlot.text=movie.plot
             tvDirector.text=movie.director
             tvActors.text=movie.actors
