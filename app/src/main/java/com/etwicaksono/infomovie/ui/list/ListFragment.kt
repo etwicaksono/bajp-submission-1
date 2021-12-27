@@ -57,7 +57,7 @@ class ListFragment : Fragment() {
             }
             listAdapter.setMovies(viewModel.movie)
 
-            binding?.rvAcademy?.apply {
+            binding?.rvFilm?.apply {
                 layoutManager = LinearLayoutManager(context)
                 setHasFixedSize(true)
                 adapter = listAdapter
