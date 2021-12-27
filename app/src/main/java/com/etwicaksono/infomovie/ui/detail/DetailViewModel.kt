@@ -4,9 +4,6 @@ import android.content.Context
 import androidx.lifecycle.ViewModel
 import com.etwicaksono.infomovie.data.MovieEntity
 import com.etwicaksono.infomovie.utils.DataDummy
-import com.etwicaksono.infomovie.utils.getJsonDataFromAsset
-import com.google.gson.Gson
-import com.google.gson.reflect.TypeToken
 
 class DetailViewModel : ViewModel() {
 
@@ -17,8 +14,8 @@ class DetailViewModel : ViewModel() {
     fun setSelectedMovie(type: String?, id: Int?) {
         if (type != null) {
             this.type = type
-        }else{
-            this.type="movies"
+        } else {
+            this.type = "movies"
         }
         if (id != null) {
             this.movieId = id
@@ -26,7 +23,10 @@ class DetailViewModel : ViewModel() {
     }
 
     fun getMovie(context: Context) {
-        val result = if(type=="movies")DataDummy.getAllMovies(context) else DataDummy.getAllTvShows(context)
+        val result =
+            if (type == "movies") DataDummy.getAllMovies(context) else DataDummy.getAllTvShows(
+                context
+            )
 
         for (res in result) {
             if (movieId == res.id) {

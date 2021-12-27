@@ -29,4 +29,4 @@ data class MovieEntity(
     val plot: String?,
     @SerializedName("poster")
     val poster: String?
-):Parcelable
+) : Parcelable

@@ -39,27 +39,30 @@ class DetailActivity : AppCompatActivity() {
                     this@DetailActivity.packageName
                 )
             )
-            tvReleaseDate.text=movie.releaseDate
-            tvRuntime.text= movie.runtime?.let { getRuntime(it.toInt()) }
-            tvPlot.text=movie.plot
-            tvDirector.text=movie.director
-            tvActors.text=movie.actors
-            tvHeader.text=if(movie.type=="movies")getString(R.string.detail_movie) else getString(R.string.detail_tv_show)
+            tvReleaseDate.text = movie.releaseDate
+            tvRuntime.text = movie.runtime?.let { getRuntime(it.toInt()) }
+            tvPlot.text = movie.plot
+            tvDirector.text = movie.director
+            tvActors.text = movie.actors
+            tvHeader.text =
+                if (movie.type == "movies") getString(R.string.detail_movie) else getString(R.string.detail_tv_show)
 
             fab.setOnClickListener {
-                val selected = if(movie.type=="movies")"movie" else "tv show"
-                val mimeType="text/plain"
+                val selected = if (movie.type == "movies") "movie" else "tv show"
+                val mimeType = "text/plain"
                 ShareCompat.IntentBuilder
                     .from(this@DetailActivity)
                     .setType(mimeType)
                     .setChooserTitle("Bagikan $selected ini sekarang!")
-                    .setText("""
+                    .setText(
+                        """
                         Ada $selected seru loh, yuk nonton sekarang! Nih aku kasih infonya.
                         Movie : ${movie.title}
                         Genre : ${movie.genres}
                         Tahun : ${movie.year}
                         Sinopsis : ${movie.plot}
-                    """.trimIndent())
+                    """.trimIndent()
+                    )
                     .startChooser()
             }
         }
