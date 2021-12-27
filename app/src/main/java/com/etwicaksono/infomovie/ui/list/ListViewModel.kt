@@ -6,7 +6,6 @@ import com.etwicaksono.infomovie.data.MovieEntity
 import com.etwicaksono.infomovie.utils.getJsonDataFromAsset
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
-import java.io.IOException
 
 class ListViewModel : ViewModel() {
 

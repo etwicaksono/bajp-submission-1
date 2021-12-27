@@ -1,7 +1,7 @@
 package com.etwicaksono.infomovie.ui.detail
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ShareCompat
 import androidx.lifecycle.ViewModelProvider
 import com.etwicaksono.infomovie.R

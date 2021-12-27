@@ -1,9 +1,7 @@
 package com.etwicaksono.infomovie.ui.list
 
-import android.content.Intent
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.etwicaksono.infomovie.data.MovieEntity
 import com.etwicaksono.infomovie.databinding.ItemsRowMovieBinding
